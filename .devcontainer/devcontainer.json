@@ -1,6 +1,13 @@
 {
-  "name": "Java 17 Dev Container",
-  "image": "://mcr.microsoft.com",
+  "name": "Java 17 with Features",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "installMaven": "true",
+      "installGradle": "true"
+    }
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -9,5 +16,4 @@
     }
   },
   "forwardPorts": [8080],
-  "postCreateCommand": "java -version"
 }
